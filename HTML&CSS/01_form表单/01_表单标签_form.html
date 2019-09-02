@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<h3>用户注册</h3>
+	<form action="http://baidu.com/" method="get">
+		<table>
+			<tr>
+				<td>用户名：</td>
+				<!--文本框-->
+				<td><input type="text" name="user"></td>
+			</tr>
+
+			<tr>
+				<td>密码：</td>
+				<!--密码框-->
+				<td><input type="password" name="pwd"></td>
+			</tr>
+			<tr>
+					<!--单选框-->
+				<td>性别：</td>
+				<td>
+					<input type="radio" name="sex" value="男">男
+					<input type="radio" name="sex" value="女">女
+					<input type="radio" name="sex" value="非正常人类">不确定
+				</td>
+			</tr>
+			<tr>
+				<!--下拉列表-->
+				<td>学历:</td>
+				<td>
+					<select name="edu">
+						<option value="1">小学</option>
+						<option value="2">初中</option>
+						<option value="3">高中</option>
+						<option value="4">大专</option>
+						<option value="5" selected="selected">学士</option>
+						<option value="6">硕士</option>
+						<option value="7">博士</option>
+						<option value="8">院士</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<!--文件上传-->
+				<td>头像</td>
+				<td>
+				<!--文件选择框-->
+				<input type="file" name="photo" accept="image/*"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					个人简介:
+				</td>
+				<td>
+					<!--文本域-->
+					<textarea name="intro"  cols="20" rows="10"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="注册">
+				</td>
+				<td>
+					<input type="reset" value="重置">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="点一点">
+				</td>
+				<td>
+					生活快乐多一点
+				</td>
+			</tr>
+
+
+
+
+
+
+		</table>
+	</form>
+	</body>
+</html>
