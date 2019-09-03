@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <img width="100%" id="img" src="../img/3.jpg"/>
+</div>
+</body>
+<script>
+    /*
+    * 【需求】使用setInterval(fn,millisecond)完成轮播图案例
+    * */
+    var count = 1;
+    setInterval(function () {
+        if (count>3) count=1;
+        document.getElementById("img").src = "../img/" + count + ".jpg";
+        count++;
+    }, 1000/120);
+
+</script>
+</html>

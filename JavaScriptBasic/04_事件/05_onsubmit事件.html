@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" id="registFrom" onsubmit="return submitForm(this.username,this.pwd);">
+			用户名：<input type="text"  name="username" id="uName"/><br />
+			密码：<input type="password" name="pwd" id="pwd"/><br />
+			<input type="submit" value="注册" />
+		</form>
+	</body>
+	<script>
+        /*
+        * 【需求】注册表单校验
+        * 【要求】
+        *    1.在用户名和密码都输入的情况下表单才能被提交；
+        * */
+        function submitForm(name,psw) {//submit是关键词，所以不能作为函数的名称
+			if (name.value&&psw.value){
+			    return true;
+			}else {
+			    alert("请输入账号和密码！");
+			    return false;
+			}
+
+        }
+
+	</script>
+</html>

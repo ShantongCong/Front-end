@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button >点我，我会爆炸</button>
+</body>
+<script>
+	/*
+	* 【需求】使用setTimeout()方法模拟定时炸弹
+	* */
+	var timeout = window.setTimeout(function () {
+	    alert("爆炸了。。。")
+
+    },2);
+	//设置为两毫秒就能来的及解除，一毫秒就解除不了
+	setTimeout(function ()
+    {
+	clearTimeout(timeout);
+    },0)
+
+
+
+
+</script>
+</html>

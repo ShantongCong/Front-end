@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+            /*
+            * 【需求】校验用户名
+            * 【要求】鼠标光标移开用户名输入框之后，检查用户名是否输入；
+            * */
+            window.onload=function (ev) {
+              document.getElementById("userName").onblur=function (ev2) {
+                  //var object = document.getElementById("userName").value;
+                  var object =this.value;
+                  if (!object){
+                      alert("请输入用户名！")
+				  }
+			  }
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" method="get">
+			用户名：<input type="text" name="userName" id="userName" /><br />
+			密码：<input type="password" name="passWord" id="passWord" onblur="check(this.value)" /><br />
+			<input type="submit" value="提交订单" />
+		</form>
+	</body>
+</html>
+<script>
+	function check(password) {
+		if (!password){
+		    alert("密码不能为空");
+		}
+    }
+</script>

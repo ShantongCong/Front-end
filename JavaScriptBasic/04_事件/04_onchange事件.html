@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<form action="" method="get">
+			商品单价：<input value="10" id="proPrice" />
+			*商品件数：<input type="text" id="num"  onkeyup="calcuTotalPrice(this.value);"/>
+		<!--*商品件数：<input type="text" id="num"  onchange="calcuTotalPrice(this.value);"/>-->
+			=商品总价：
+			<input type="text" id="totalPrice" /><br />
+			<input type="submit" value="提交订单" />
+		</form>
+	</body>
+	<script type="text/javascript">
+        //【需求】根据商品件数动态计算商品总价
+		function calcuTotalPrice(num) {
+		    //alert("内容改变");
+		    //var num = document.getElementById("num").value;
+		    document.getElementById("totalPrice").value=num*10;
+
+        }
+
+	</script>
+</html>

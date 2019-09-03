@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function (ev) {
+            document.getElementById("btn").onclick = function (ev) {
+                alert("我是副班长，我会跳舞")
+            }
+        }
+
+    </script>
+</head>
+<body>
+<!--
+    【需求】将事件动态绑定案例中的代码挪到head标签中观察执行结果
+-->
+<button id="btn">我是副班长，点我，我会跳舞</button>
+<br>
+</body>
+<script>
+    document.getElementById("btn").onclick=function (ev) {
+        alert("下面的函数在唱歌！")
+    }
+</script>
+</html>

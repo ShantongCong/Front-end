@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button  onclick="singSong()">我是班长，点我，我会唱歌</button><br>
+		<button id="btn" >我是副班长，点我，我会跳舞</button><br>
+	</body>
+
+	
+	<script>
+        /*
+        *【需求】分别使用静态绑定和动态绑定给button绑定事件
+        *
+        * */
+        //静态绑定
+        function singSong() {
+            alert("唱歌")
+        }
+        //动态绑定
+        document.getElementById("btn").onclick=function (ev) {
+            alert("跳个舞吧");
+		}
+
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!--
+	【案例一】静态绑定：
+		1.给按钮注册鼠标单击事件；
+		2.按钮被点击后，弹出警告框，弹出内容为："班长唱歌了.......";
+		
+	
+	
+	【案例二】动态绑定：
+		1.获取按钮标签；
+		2.给按钮派发单击事件，单击后弹出警告框，内容为："班长唱歌了.......";
+		
+		
+		
+		
+-->
+	
+	
+</html>
