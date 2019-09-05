@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>根据标签的属性找元素</title>
+    <script type="text/javascript">
+       
+    </script>
+</head>
+<body>
+    <input type="button" value="(通过标签名)给a链接添加地址" id="b2" onclick="setHref()"/>
+    <input type="button" value="(通过name属性)给div设值" id="b3"/>
+    <input type="button" value="(通过类名)给div设值" id="b4"/>
+    <hr/>
+
+    <a>阿里巴巴</a><br/>
+    <a>阿里巴巴</a><br/>
+    <a>阿里巴巴</a><br/>
+    <hr/>
+    <div name="one"></div>
+    <div name="one"></div>
+    <div name="one"></div>
+    <hr/>
+    <div class="two"></div>
+    <div class="two"></div>
+    <div class="two"></div>
+</body>
+<script>
+    function setHref() {
+    var aNodes = document.getElementsByTagName("a");
+
+        for (var i=0;i<aNodes.length;i++){
+            aNodes[i].href="http://www.baidu.com";
+            aNodes[i].target="_blank";//在新的窗口打开
+        }
+    }
+
+    var b3Btn = document.getElementById("b3");
+    b3Btn.onclick=function (ev) {
+        var bNodes = document.getElementsByName("one");
+        for (var i = 0; i < bNodes.length; i++) {
+            var obj = bNodes[i];
+            obj.innerHTML="<a href='http://www.baidu.com' target='_blank'>JavaEE开发</a>";
+        }
+    }
+
+    var b4Btn = document.getElementById("b4");
+    b4Btn.onclick=function (ev) {
+        var tNodes = document.getElementsByClassName("two");
+        //itar遍历
+        for (var i = 0; i < tNodes.length; i++) {
+            var obj = tNodes[i];
+            obj.innerHTML="<a href='http://www.baidu.com' target='_blank'>百度一哈，你就晓得！</a>";
+
+        }
+
+    }
+
+
+
+</script>
+</html>

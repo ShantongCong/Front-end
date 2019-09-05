@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				//<button id="btn1">单击btn1，判断id="myDiv"的标签是否有子元素</button><br />
+				var btn1 = document.getElementById("btn1");
+				btn1.onclick=function (ev) {
+				    var myDiv = document.getElementById("myDiv");
+				    var hasChildNodes = myDiv.hasChildNodes();
+				    alert(hasChildNodes);
+				}
+				//<button id="btn2">单击btn2，删除id="myDiv"下的子标签</button><br />
+				var btn2 = document.getElementById("btn2");
+				btn2.onclick=function (ev) {
+                   var myDiv1 = document.getElementById("myDiv");
+                   var mySpan1 = document.getElementById("mySpan");
+                    //父标签删除子标签
+				   myDiv1.removeChild(mySpan1);
+				}
+
+				//<button id="btn3">单击btn3，创建一个新的span，追加到id="myDiv"内部后面</button><br />
+                var btn3 = document.getElementById("btn3");
+                btn3.onclick=function (ev) {
+                    var myDiv1 = document.getElementById("myDiv");
+                    var spanElement = document.createElement("span");
+                    spanElement.innerText="我是新的标签！";
+                    myDiv1.appendChild(spanElement);
+
+
+                }
+			}
+		</script>
+	</head>
+	<body>
+		<h2>父子元素操作</h2>
+		<hr />
+		<h3>操作按钮</h3>
+		<button id="btn1">单击btn1，判断id="myDiv"的标签是否有子元素</button><br />
+		<button id="btn2">单击btn2，删除id="myDiv"下的子标签</button><br />
+		<button id="btn3">单击btn3，创建一个新的span，追加到id="myDiv"内部后面</button><br />
+		
+		<div id="myDiv">
+			传智<span id="mySpan">播客</span>
+		</div>
+		<div id="myDiv2"></div>
+	</body>
+</html>
