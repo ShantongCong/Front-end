@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>常见事件</title>
+		<script src="../js/jquery-3.3.1.js"></script>
+	</head>
+
+	<body>
+		<form action="#" method="get" id="myForm">
+			
+			blur：<input id="e01" type="text" /><span id="textMsg"></span> <br/>
+			<hr/>
+			change：<input type="text" name="e02" id="e02" /><span id="textMsg2"></span> <br/>
+			<hr/>
+			click：<input id="e03" type="button" value="可以点击" /><span id="buttonMsg"></span> <br/>
+			
+			<input type="submit" value="提交" />
+		</form>
+	</body>
+	
+	<script type="text/javascript">
+		
+	//页面加载完成事件
+	$(function(){
+	alert("页面加载完成了.........");
+	
+		
+		//鼠标失去焦点事件（离焦事件）
+		$("#e01").blur(function() {
+			$("#textMsg").html("文本框失去焦点：blur");
+		});
+		
+		//监听内容改变事件
+		$("#e02").change(function() {
+			$("#textMsg2").html("文本框中的内容改变了：change");
+		});
+	
+		//单击事件
+		$("#e03").click(function() {
+			$("#buttonMsg").html("单击：click");
+		});
+		
+		//表单提交事件
+		$("#myForm").submit(function(){
+			alert("表单提交了.....");
+			return false;
+		})
+		
+	})
+	</script>
+
+</html>

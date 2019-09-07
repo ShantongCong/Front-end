@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			div {
+				border: 1px solid #000;
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+		
+	</head>
+
+	<body>
+		<input type="button" id="b1" value="显示/隐藏 b1Div" />
+		<div id="b1Div" style="display: none"></div> <br/>
+		<input type="button" id="b2" value="滑出/滑入b2Div" />
+		<div id="b2Div"></div> <br/>
+		<input type="button" id="b3" value="淡出/淡入b3Div" />
+		<div id="b3Div" style="background-color:#1991ed"></div>
+	</body>
+	<script>
+		//点击b1按钮
+		$("#b1").click(function () {
+		    //show()显示
+			//hide()隐藏
+			//toggle() 交替执行
+		    $("#b1Div").toggle(2000,function () {
+				alert("动画执行完成了！");
+            });
+		    //参数：回调函数callback
+			//参数：time 执行过程的用时
+        })
+
+        $("#b2").click(function () {
+            //slideDown();
+            //slideUp();
+            //slideToggle() 交替执行
+            $("#b2Div").slideToggle(2000,function () {
+                alert("动画执行完成了！");
+            });
+            //参数：回调函数callback
+            //参数：time 执行过程的用时
+        })
+        $("#b3").click(function () {
+            //fadeOut
+            //fadeIn
+            //slideToggle() 交替执行
+            $("#b3Div").fadeToggle(2000,function () {
+                //alert("动画执行完成了！");
+            });
+            //参数：回调函数callback
+            //参数：time 执行过程的用时
+        })
+
+
+
+	</script>
+
+</html>

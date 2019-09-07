@@ -1,0 +1,94 @@
+a{
+				text-decoration: none;
+			}
+			
+			.cle{
+				clear: both;
+			}
+			
+			/*logo 部分的div*/
+			.header{
+				width: 100%;
+			}
+			.header div{
+				float:left;
+				width:33.33%;
+				height: 60px;
+				line-height: 50px;
+			}
+			.header a{
+				padding: 15px;
+			}
+			
+			/*菜单部分*/
+			.menu{
+				width: 100%;
+				background-color: #000;
+				height: 50px;
+				padding-top:1px
+			}
+			
+			.menu ul li{
+				list-style-type: none;
+				display: inline;
+			}
+			
+			.menu a{
+				font-size: 25px;
+				color: #fff;
+				
+			}
+			
+			/*轮播图*/
+			.lunbo{
+				width:100%;
+				margin-top:10px;
+				margin-bottom: 10px;
+			}
+			
+			.lunbo img{
+				width:100%;
+			}
+			
+			/*热门商品*/
+			/*.left,.right{
+				float:left;
+			}*/
+			.left{
+				float:left;
+				width: 16%;
+				height: 500px;
+			}
+			.right{
+				float: left;
+				width:84%;
+				text-align: center;
+				height: 500px;
+			}
+			
+			.middle{
+				float:left;
+				width: 50%;
+				height: 250px;
+			}
+			.item{
+				float:left;
+				width:16.66%;
+				height: 250px;
+			}
+			
+			/*给广告*/
+			.ad1{
+				width: 100%;
+			}
+			.ad1 img{
+				width: 100%;
+			}
+			
+			/*版权*/
+			.foot{
+				width:100%;
+			}
+			.foot p{
+				text-align: center;
+			}
