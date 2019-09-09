@@ -12,6 +12,33 @@
 		<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
 		<script type="text/javascript">
 			$(function(){
+			    //>>>把左边的全部移到右边
+				$("#toRight3").click(function () {
+					$("#left option").appendTo($("#right"));
+                })
+                $("#toLeft3").click(function () {
+                    $("#right option").appendTo($("#left"));
+                })
+				//>>把左边选中的标签移到右边
+                $("#toRight2").click(function () {
+                    $("#left option:selected").appendTo($("#right"));
+                })
+
+                $("#toLeft2").click(function () {
+                    $("#right option:selected").appendTo($("#left"));
+                })
+				//>把选中的标签第一个选到另一边
+                $("#toRight1").click(function () {
+                    $("#left option:selected:first").appendTo($("#right"));
+                })
+
+                $("#toLeft1").click(function () {
+                    $("#right option:selected:first").appendTo($("#left"));
+                })
+
+
+
+
 			});
 		</script>
 	</head>

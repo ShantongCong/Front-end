@@ -7,8 +7,14 @@
 		<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				//1.清空ul
+				//1.清空ul empty()
+				$("#btn1").click(function () {
+					$("#city").empty();
+                });
 				//2.移除ul
+                $("#btn2").click(function () {
+                    $("#city").remove();
+                });
 			});
 		</script>
 	</head>

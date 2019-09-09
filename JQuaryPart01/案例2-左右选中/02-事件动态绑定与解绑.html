@@ -7,25 +7,23 @@
     <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(function () {
-
-            //动态绑定
+            //动态绑定事件
             $("#btn1").click(function () {
                 var aTags = $("a");
                 // for (let obj of aTags) {
                 //     $(obj).click(function () {
-                //         this.parentElement.parentElement.remove();
+                //     this.parentElement.parentElement.remove();
                 //     });
                 // }
-                aTags.bind("click", function () {
+                aTags.bind("click",function () {
                     this.parentElement.parentElement.remove();
                 });
-            });
-
-            //解除动态绑定
+            })
+            //解除动态绑定事件
             $("#btn2").click(function () {
                 var aTags = $("a");
                 aTags.unbind();
-            });
+            })
 
         });
     </script>

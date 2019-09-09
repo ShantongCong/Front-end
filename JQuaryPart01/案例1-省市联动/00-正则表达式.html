@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    var str="13346465644";
+    var str2="17717416641";
+    //手机号
+    var  regExp=/^1\d{10}$/;
+    var match1 = str2.match(regExp);
+    //var match1 = str.match(regExp);
+    alert(match1);
+    //邮箱：6到12位字母或数字+@+3到6个字母和数字+.com
+    var  regEmail=/^[0-9a-z]{6,12}@[0-9a-z]{3~6}\.com$/i;
+                  /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/
+
+</script>
 </html>

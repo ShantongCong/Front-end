@@ -7,15 +7,32 @@
 		<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				//1.在city内部的后面追加 反恐
-				//2.在city内部的前面插入 反恐
+            // <input type="button"  id="btn1" value="在city内部的后面追加反恐" />
+				$("#btn1").click(function () {
+					//$("#fk").appendTo($("#city"));
+                    $("#city").append($("#fk"));
+                });
+            // <input type="button"  id="btn2" value="在city内部的前面插入反恐" />
+                $("#btn2").click(function () {
+                    //$("#fk").appendTo($("#city"));
+                    $("#city").prepend($("#fk"));
+                });
+                // city内部的前面插入自定义的反恐标签
+                $("#btn3").click(function () {
+                  var li = $("<li style='color: deeppink'>这是一个自定义的反恐标签！</li>");
+                    $("#city").prepend(li);
+                });
+
 			});
 		</script>
 	</head>
 
 	<body>
 		<input type="button"  id="btn1" value="在city内部的后面追加反恐" />
+
 		<input type="button"  id="btn2" value="在city内部的前面插入反恐" />
+
+		<input type="button"  id="btn3" value="在city内部的前面插入自定义的反恐标签" />
 		<ul id="city">
 			<li id="bj" name="beijing">北京</li>
 			<li id="tj" name="tianjin">天津</li>

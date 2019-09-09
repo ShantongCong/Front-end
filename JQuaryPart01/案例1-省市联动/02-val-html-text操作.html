@@ -9,17 +9,25 @@
 			$(document).ready(function() {
 
 				//1 获取 username的value属性的值
-				
+				//alert($("#username").val());
+                alert($("input[type='text']").val());
+
+
 				//2 设置 username的默认值为"许多多"
-				
+				$("input[type='text']").val("许多多");
+
+				//alert($("input[type='text']").val());
 				//3通过html获取div标签体的内容
-				
+				alert($("div").html());
+
 				//4通过html设置div标签体的内容
-				
+				$("div").html("<i>新的斜体内容！</i>");
+
 				//5通过text获取div标签体的内容
-				
+				alert($("div").text());
+
 				//6通过text设置div标签体的内容
-				
+                //$("div").text("新设置的text内容！");
 				//7 两者设置值的区别
 				
 				//8 两者获取值的区别

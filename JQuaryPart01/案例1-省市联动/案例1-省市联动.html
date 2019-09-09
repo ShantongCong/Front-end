@@ -14,13 +14,26 @@
 		</script>
 		<script src="../js/jquery-3.3.1.js"></script>
 		<script type="text/javascript">
-			$(function() {});
+			$(function() {
+			    //绑定动态改变事件，先获取省的下标
+				$("#pro").change(function () {
+					var proVal = this.value;
+					//alert(proVal);
+
+					$("#city").html("<option>请选择</option>");
+					$(arr[proVal]).each(function (index,element) {
+						//alert(element);
+						//创建式的选择标签
+						$("<option>"+element+"</option>").appendTo($("#city"));
+                    })
+                });
+			});
 		</script>
 	</head>
 
 	<body>
 		<form action="#" method="get">
-			<select name="pro" >
+			<select id="pro" name="pro" >
 				<option>--请选择--</option>
 				<option value="0">河北</option>
 				<option value="1">河南</option>

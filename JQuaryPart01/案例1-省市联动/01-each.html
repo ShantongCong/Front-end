@@ -1,28 +1,57 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>05-可见性过滤选择器.html</title>
-		<script type="text/javascript" src="../js/jquery-3.3.1.js" ></script>
-		<script type="text/javascript">
-			$(function() {
-			});
-		</script>
-	</head>
-	<body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>05-可见性过滤选择器.html</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //<input type="button" value=" 选取所有的文本隐藏域, 并打印它们的值" id="b1" />
+            $("#b1").click(function () {
+                $("input[type='hidden']").each(function (index, element) {
+                    //element 为js对象，可以通络value的属性得到对应的值
+                    //把js对象转化为jq对象可以使用val()方法获得对应的值
+                    //因为element是js对象，也可以通过this进行值传递
 
-		<input type="button" value=" 选取所有的文本隐藏域, 并打印它们的值" id="b1" />
-		<input type="button" value=" 选取所有的文本隐藏域, 并打印它们的值" id="b2" />
-		<input type="button" value=" 遍历数组" id="b3" />
-		<br /><br />
+                    //this: 在事件动态绑定时，指向的是被绑定事件的那个对象
+                    //this:在遍历中指向的是被遍历到的那个元素
+                    alert(index + "  " + element.value + "  " + $(element).val() + " " + this.value);
+                });
+            });
+            //<input type="button" value=" 选取所有的文本隐藏域, 并打印它们的值" id="b2" />
+            $("#b2").click(function () {
+                var inputs = $("input[type='hidden']");
+                $.each(inputs, function (index, element) {
+                    alert(index + "  " + element.value + "  " + this.value);
+                })
+            });
+                //<input type="button" value=" 遍历数组" id="b3" />
+            $("#b3").click(function () {
+                var array=[8,2,6,4,56,7];
+                $(array).each(function (index,element) {
+                    alert(index+"  "+element);
+                })
+            });
 
-		<!--文本隐藏域-->
-		<input type="hidden" value="hidden_1">
-		<input type="hidden" value="hidden_2">
-		<input type="hidden" value="hidden_3">
-		<input type="hidden" value="hidden_4">
 
-	</body>
+        });
+    </script>
+</head>
+<body>
+
+<input type="button" value=" 选取所有的文本隐藏域, 并打印它们的值" id="b1"/>
+<input type="button" value=" 选取所有的文本隐藏域, 并打印它们的值" id="b2"/>
+<input type="button" value=" 遍历数组" id="b3"/>
+<br/><br/>
+
+<!--文本隐藏域-->
+<input type="hidden" value="hidden_1">
+<input type="hidden" value="hidden_2">
+<input type="hidden" value="hidden_3">
+<input type="hidden" value="hidden_4">
+
+</body>
 
 </html>
